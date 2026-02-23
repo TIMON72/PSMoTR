@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PSMoTR.Classes.Auto">
+    <Position X="11.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BACAABAAAIDAAJIIQEBBAUJDhhAABABAAACgAAIAYAE=</HashCode>
+      <FileName>Classes\Auto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Classes.Model1TrafficLight">
+    <Position X="8.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAQAAIAAAAAAAAAAAAAAAAAAgAgAA=</HashCode>
+      <FileName>Classes\Model1TrafficLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Classes.Model2TrafficLight">
+    <Position X="8.25" Y="3" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAABAQAAIAAEAAAAAAAGAIAAAAAgAgAA=</HashCode>
+      <FileName>Classes\Model2TrafficLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Classes.Model3TrafficLight">
+    <Position X="8.25" Y="6.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAhAAABAQAAIAAEAAABAAAGAJAABAAgAgAA=</HashCode>
+      <FileName>Classes\Model3TrafficLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Classes.Point">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAEAAAAAEgAAUAAABAAAAAMBAAAAAAAAAYAA=</HashCode>
+      <FileName>Classes\Point.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Classes.Project">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBAAAAAAAAAAAACAAAQAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Classes\Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Classes.Route">
+    <Position X="2.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAKAgAAAAGAAAIAmhMAQAAAAAAAAAMAAAQAAgAAAACA=</HashCode>
+      <FileName>Classes\Route.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Classes.TrafficLight">
+    <Position X="5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IEAAACAAAEAICgBNAU84gIAAAAAhgkABAQAAAgFEAEA=</HashCode>
+      <FileName>Classes\TrafficLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Classes.TrafficLightEventArgs">
+    <Position X="3" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\TrafficLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Classes.Way">
+    <Position X="0.5" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAACAAAAgAQAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Classes\Way.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

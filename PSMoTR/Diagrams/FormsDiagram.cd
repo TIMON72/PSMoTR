@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PSMoTR.Forms.MenuForm">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>kyCEgQBAAipQSAFAAACIAAIGFQwCAAgAUCBAQBAEABg=</HashCode>
+      <FileName>Forms\MenuForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Forms.ModelForm">
+    <Position X="3.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEAABCAIKAAAABKAERACAAAAAAAAAAAABEAABAA=</HashCode>
+      <FileName>Forms\ModelForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Forms.ProjectEditForm">
+    <Position X="3.75" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAADAAAAAQBACAAAACEQAQAABAAEAABQABAAA=</HashCode>
+      <FileName>Forms\ProjectEditForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Forms.RoutesEditForm">
+    <Position X="6.5" Y="6.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAIAgAAICCBAEABABCCAAAACEAACAAAAAAACCAABAAA=</HashCode>
+      <FileName>Forms\RoutesEditForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PSMoTR.Forms.TrafficLightsEditForm">
+    <Position X="6.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAIAgAAhpCBAAARIDACAAAACEAAEAAAAAAAAAAABIQA=</HashCode>
+      <FileName>Forms\TrafficLightsEditForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
