@@ -339,16 +339,52 @@ namespace PSMoTR.Forms
         /// Загрузка данных проекта
         /// </summary>
         /// <param name="project"></param>
-        public void LoadProjectData(Project project)
+        /// <returns>true если загрузка успешна, false если произошла ошибка</returns>
+        public bool LoadProjectData(Project project)
         {
+            if (project == null)
+            {
+                MessageBox.Show("Проект не выбран.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             // Назначение текущего проекта
             Project.Current = project;
             // Считывание изображения-схемы модели
-            modelForm.PB_Model.Image = Image.FromFile(project.PicturePath);
+            if (!string.IsNullOrEmpty(project.PicturePath) && System.IO.File.Exists(project.PicturePath))
+            {
+                try
+                {
+                    modelForm.PB_Model.Image = Image.FromFile(project.PicturePath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка загрузки изображения:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show($"Файл изображения не найден:\n{project.PicturePath ?? "(путь не указан)"}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            // Проверка наличия директории проекта
+            if (project.Directory == null || !project.Directory.Exists)
+            {
+                MessageBox.Show($"Директория проекта не найдена.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             // Считывание точек и маршрутов и заполнение путей
-            Classes.Point.OpenFile(project.Directory.FullName + "\\points.txt");
-            Route.OpenFile(project.Directory.FullName + "\\routes.txt");
-            Way.FillWaysList();
+            try
+            {
+                Classes.Point.OpenFile(project.Directory.FullName + "\\points.txt");
+                Route.OpenFile(project.Directory.FullName + "\\routes.txt");
+                Way.FillWaysList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки данных маршрутов:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             // !!! TODO: обнулить авто и таймеры !!!
             //B_Stop.PerformClick();
             //Auto.AutosList.Clear();
@@ -362,6 +398,8 @@ namespace PSMoTR.Forms
             L_CurrentProjectName.Text = project.Name;
             // Настраиваем позицию текущей формы
             Location = new System.Drawing.Point(modelForm.Width, 0);
+            
+            return true;
         }
         /// <summary>
         /// Очистка данных проекта
@@ -369,7 +407,8 @@ namespace PSMoTR.Forms
         public void ClearProjectData()
         {
             Project.Current = null;
-            modelForm.PB_Model.Image.Dispose();
+            modelForm.PB_Model.Image?.Dispose();
+            modelForm.PB_Model.Image = null;
         }
     }
 }

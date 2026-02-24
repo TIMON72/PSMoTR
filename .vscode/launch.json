@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "PSMoTR (WinForms)",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/PSMoTR/bin/Debug/net472/PSMoTR.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/PSMoTR",
+            "stopAtEntry": false
+        },
+        {
+            "name": "PSMoTR (Release)",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "build-release",
+            "program": "${workspaceFolder}/PSMoTR/bin/Release/net472/PSMoTR.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/PSMoTR",
+            "stopAtEntry": false
+        }
+    ]
+}

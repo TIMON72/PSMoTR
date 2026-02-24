@@ -71,6 +71,49 @@ namespace PSMoTR.Classes
                 di.Create();
             foreach (var dir in di.GetDirectories())
                 ProjectsList.Add(new Project(dir.Name, dir));
+            
+            // Если нет проектов - создать проект по умолчанию из Resources
+            if (ProjectsList.Count == 0)
+            {
+                try
+                {
+                    // Создаем директорию для проекта по умолчанию
+                    DirectoryInfo defaultProjectDir = di.CreateSubdirectory("Default");
+                    
+                    // Копируем файлы из Resources
+                    string resourcesPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources");
+                    
+                    if (System.IO.Directory.Exists(resourcesPath))
+                    {
+                        // Копируем map.png
+                        string mapSource = Path.Combine(resourcesPath, "map.png");
+                        if (File.Exists(mapSource))
+                            File.Copy(mapSource, Path.Combine(defaultProjectDir.FullName, "map.png"), true);
+                        
+                        // Копируем points.txt
+                        string pointsSource = Path.Combine(resourcesPath, "points.txt");
+                        if (File.Exists(pointsSource))
+                            File.Copy(pointsSource, Path.Combine(defaultProjectDir.FullName, "points.txt"), true);
+                        
+                        // Копируем routes.txt
+                        string routesSource = Path.Combine(resourcesPath, "routes.txt");
+                        if (File.Exists(routesSource))
+                            File.Copy(routesSource, Path.Combine(defaultProjectDir.FullName, "routes.txt"), true);
+                        
+                        // Копируем traffic_lights.txt
+                        string trafficLightsSource = Path.Combine(resourcesPath, "traffic_lights.txt");
+                        if (File.Exists(trafficLightsSource))
+                            File.Copy(trafficLightsSource, Path.Combine(defaultProjectDir.FullName, "traffic_lights.txt"), true);
+                        
+                        // Добавляем проект в список
+                        ProjectsList.Add(new Project("Default", defaultProjectDir));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка создания проекта по умолчанию:\n{ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

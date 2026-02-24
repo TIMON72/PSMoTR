@@ -112,25 +112,28 @@ namespace PSMoTR.Forms
                     oldListCount++;
                 }
                 // Загрузка данных проекта
-                menuForm.LoadProjectData(selectedProject);
-                // Закрываем форму
-                firstLoad = false;
-                Close();
+                if (menuForm.LoadProjectData(selectedProject))
+                {
+                    // Закрываем форму только если загрузка успешна
+                    firstLoad = false;
+                    Close();
+                }
             }
             // Если нажата клавиша Delete и выделена какая-либо строка
             if (e.KeyCode == Keys.Delete && choosenRow >= 0)
             {
                 // Удаляется текущий проект?
-                if (selectedProject.Name == Project.Current.Name)
+                if (Project.Current != null && selectedProject.Name == Project.Current.Name)
                 {
                     menuForm.ClearProjectData();
-                    Directory.Delete(selectedProject.Directory.FullName, true);
+                    if (selectedProject.Directory != null && selectedProject.Directory.Exists)
+                        Directory.Delete(selectedProject.Directory.FullName, true);
                     Application.Restart();
                 }
                 else
                 {
                     // Папка существует?
-                    if (selectedProject.Directory != null)
+                    if (selectedProject.Directory != null && selectedProject.Directory.Exists)
                         // Удаляем папку
                         Directory.Delete(selectedProject.Directory.FullName, true);
                     bindingSource.Remove(selectedProject); // Удаление проекта из списка через binding (в том числе и из таблицы)

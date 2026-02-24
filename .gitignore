@@ -1,0 +1,109 @@
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+BuildProcessTemplates/
+
+# Visual Studio cache/options
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files
+*.rsuser
+
+# Build results files
+*.ilk
+*.meta
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Caches
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# Backup files
+*.backup
+*.bak
+*.orig
+
+# IDE - VS Code
+# Оставляем .vscode/ для конфигурации запуска и сборки!
+# Игнорируем только некоторые пользовательские файлы:
+.vscode/*.txt
+.vscode/*.log
+# launch.json и tasks.json СОХРАНЯЮТСЯ для работы отладки
+
+# Rider
+.idea/
+*.sln.iml
+
+# ReSharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# User-specific project files
+.vscode/*.txt
+.vscode/*.log
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+
+# Publish profiles
+*.pubxml
+*.publishproj
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Dynamically created projects folder content (if needed)
+# Uncomment if you don't want to track user-created projects:
+# PSMoTR/Projects/*
+# !PSMoTR/Projects/Default/

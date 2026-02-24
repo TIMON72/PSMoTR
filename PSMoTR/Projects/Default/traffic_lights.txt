@@ -1,0 +1,16 @@
+X=100,5; Y=68; Speed=8; Type=up; GD=25; RD=25; SSC=Green; OL=40; LS=False
+X=100,5; Y=71,5; Speed=8; Type=usual; GD=25; RD=25; SSC=Green; OL=70; LS=False
+X=107,5; Y=58; Speed=0; Type=usual; GD=25; RD=25; SSC=Red; OL=55; LS=False
+X=110,5; Y=58; Speed=0; Type=right; GD=25; RD=25; SSC=Red; OL=40; LS=False
+X=110,5; Y=78; Speed=0; Type=left; GD=25; RD=25; SSC=Red; OL=40; LS=False
+X=113,5; Y=78; Speed=0; Type=usual; GD=25; RD=25; SSC=Red; OL=55; LS=False
+X=120,5; Y=65; Speed=8; Type=usual; GD=25; RD=25; SSC=Green; OL=42; LS=True
+X=120,5; Y=68; Speed=8; Type=down; GD=25; RD=25; SSC=Green; OL=13; LS=False
+X=162,5; Y=68; Speed=8; Type=up; GD=25; RD=25; SSC=Green; OL=13; LS=False
+X=162,5; Y=71,5; Speed=8; Type=usual; GD=25; RD=25; SSC=Green; OL=42; LS=True
+X=169,5; Y=58; Speed=0; Type=usual; GD=25; RD=25; SSC=Red; OL=55; LS=False
+X=173; Y=58; Speed=0; Type=right; GD=25; RD=25; SSC=Red; OL=40; LS=False
+X=173; Y=78; Speed=0; Type=left; GD=25; RD=25; SSC=Red; OL=40; LS=False
+X=176; Y=78; Speed=0; Type=usual; GD=25; RD=25; SSC=Red; OL=55; LS=False
+X=183; Y=65; Speed=8; Type=usual; GD=25; RD=25; SSC=Green; OL=70; LS=False
+X=183; Y=68; Speed=8; Type=down; GD=25; RD=25; SSC=Green; OL=40; LS=False
